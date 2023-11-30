@@ -1,9 +1,8 @@
 from socket import *
-from sense_hat import SenseHat
+from sense_hat import SenseHat 
 from time import sleep
 
-servername = 'localhost'
-serverport = 6666
+broadcastPort = 6666
 
 
 #methods
@@ -21,7 +20,7 @@ broadcastsocket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 while True:
     data = str(getMeasurement())
     encodeddata = data.encode('utf-8')
-    broadcastsocket.sendto(encodeddata, ('<broadcast>', serverport))
+    broadcastsocket.sendto(encodeddata, ('<broadcast>', broadcastPort))
     sleep(1)
 
 
