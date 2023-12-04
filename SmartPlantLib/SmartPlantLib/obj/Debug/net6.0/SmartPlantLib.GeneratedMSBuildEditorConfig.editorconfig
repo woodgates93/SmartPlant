@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SmartPlantLib
 build_property.ProjectDir = C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

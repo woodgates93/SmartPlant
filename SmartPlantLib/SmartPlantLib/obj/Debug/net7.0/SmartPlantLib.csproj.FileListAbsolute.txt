@@ -1,0 +1,12 @@
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\bin\Debug\net7.0\SmartPlantLib.deps.json
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\bin\Debug\net7.0\SmartPlantLib.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\bin\Debug\net7.0\SmartPlantLib.pdb
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.AssemblyInfoInputs.cache
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.AssemblyInfo.cs
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.csproj.CoreCompileInputs.cache
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.sourcelink.json
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\refint\SmartPlantLib.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\SmartPlantLib.pdb
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantLib\SmartPlantLib\obj\Debug\net7.0\ref\SmartPlantLib.dll

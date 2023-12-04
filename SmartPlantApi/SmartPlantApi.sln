@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPlantApi", "SmartPlant
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPlantLib", "..\SmartPlantLib\SmartPlantLib\SmartPlantLib.csproj", "{67A51281-DCD4-4ED8-9FBD-2F53BA7C8C94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPlantData", "SmartPlantData\SmartPlantData.csproj", "{D68E70AE-7097-4563-8969-4365634CBB78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67A51281-DCD4-4ED8-9FBD-2F53BA7C8C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67A51281-DCD4-4ED8-9FBD-2F53BA7C8C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67A51281-DCD4-4ED8-9FBD-2F53BA7C8C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68E70AE-7097-4563-8969-4365634CBB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68E70AE-7097-4563-8969-4365634CBB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68E70AE-7097-4563-8969-4365634CBB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68E70AE-7097-4563-8969-4365634CBB78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,14 @@
 using SmartPlantLib.Collection;
+using SmartPlantApiData.Repos;
+using SmartPlantApiData;
+
+using (var context = new SmartPlantContext())
+{
+    context.Database.EnsureCreated();
+}
+
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -9,7 +16,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<SmartPlantContext>();
+
+builder.Services.AddSingleton<TemperatureCellection>();
 builder.Services.AddSingleton<TemperatureRepo>();
+
+//builder.Services.AddSingleton<>();
 
 var app = builder.Build();
 

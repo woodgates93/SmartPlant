@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartPlantLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e53c028e5afe547c80b817e83f4527962feed9bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartPlantLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartPlantLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

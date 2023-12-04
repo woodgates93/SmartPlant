@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SmartPlantApiData.Repos;
 using SmartPlantLib.Collection;
+using SmartPlantLib.Dto;
+using SmartPlantLib.Entities;
 using SmartPlantLib.Model;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,11 +13,13 @@ namespace SmartPlantApi.Controllers
     [ApiController]
     public class TempController : ControllerBase
     {
-        private TemperatureRepo _data;
+        private TemperatureCellection _data;
+        private readonly TemperatureRepo _temperatureRepo;
 
-        public TempController(TemperatureRepo repo)
+        public TempController(TemperatureCellection collection, TemperatureRepo temperatureRepo)
         {
-            _data = repo;
+            _data = collection;
+            _temperatureRepo = temperatureRepo;
         }
 
 
@@ -55,10 +60,19 @@ namespace SmartPlantApi.Controllers
         // POST api/<TempController>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public IActionResult Post([FromBody] Temperature value)
-        {
-            Temperature temperature = _data.Add(value);
-            return Created($"api/Temp/{temperature.Id}", temperature);
+        [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
+        public IActionResult Post([FromBody] TemperatureDto dto)
+        {           
+            try
+            {
+                TemperatureEntity temperature = _temperatureRepo.Save(new TemperatureEntity() { Value = dto.Temp }  );
+                return Created($"api/Temp/{temperature.Id}", temperature);
+            }
+            catch (KeyNotFoundException)
+            {
+                return UnprocessableEntity();
+            }
+          
         }
 
         // PUT api/<TempController>/5

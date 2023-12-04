@@ -1,0 +1,16 @@
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\bin\Debug\net7.0\SmartPlantData.deps.json
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\bin\Debug\net7.0\SmartPlantData.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\bin\Debug\net7.0\SmartPlantData.pdb
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\bin\Debug\net7.0\SmartPlantLib.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\bin\Debug\net7.0\SmartPlantLib.pdb
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.csproj.AssemblyReference.cache
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.AssemblyInfoInputs.cache
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.AssemblyInfo.cs
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.csproj.CoreCompileInputs.cache
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.sourcelink.json
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.csproj.CopyComplete
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\refint\SmartPlantData.dll
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\SmartPlantData.pdb
+C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantData\obj\Debug\net7.0\ref\SmartPlantData.dll
