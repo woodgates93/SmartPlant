@@ -224,19 +224,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sarah\\.nuget\\packages\\": {}
+    "C:\\Users\\penoi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarah\\source\\repos\\SmartPlantApi\\SmartPlantApi\\SmartPlantApi.csproj",
+      "projectUniqueName": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantApi\\SmartPlantApi\\SmartPlantApi.csproj",
       "projectName": "SmartPlantApi",
-      "projectPath": "C:\\Users\\sarah\\source\\repos\\SmartPlantApi\\SmartPlantApi\\SmartPlantApi.csproj",
-      "packagesPath": "C:\\Users\\sarah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarah\\source\\repos\\SmartPlantApi\\SmartPlantApi\\obj\\",
+      "projectPath": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantApi\\SmartPlantApi\\SmartPlantApi.csproj",
+      "packagesPath": "C:\\Users\\penoi\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantApi\\SmartPlantApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\penoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -286,7 +291,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
