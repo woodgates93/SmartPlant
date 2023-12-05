@@ -1,7 +1,12 @@
 // Placeholder for our api uri
-const baseUrl = "https://jsonplaceholder.typicode.com/posts"
+const baseUrl = "http://localhost:5053/api/temp/100"
 
-
+const config = {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+    },
+  };
 
 Vue.createApp({
     data() {
@@ -20,12 +25,13 @@ Vue.createApp({
         this.getPosts(baseUrl)
     },
 
+    // Access-Control-Allow-Origin
     // Methods
     methods: {
         async getPosts() {
             try {
                 console.log('Fetching posts...');
-                const response = await axios.get(baseUrl);
+                const response = await axios.get(baseUrl,config);
                 console.log('API Response:', response.data);
                 this.posts = response.data;
                 this.error = null;
@@ -45,7 +51,7 @@ Vue.createApp({
         async getPostById(id) {
             const url = baseUrl + "/" + id
             try {
-                const response = await axios.get(url)
+                const response = await axios.get(url,config)
                 this.post = await response.data
             } catch (ex) {
                 alert(ex.message)
