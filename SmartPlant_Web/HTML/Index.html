@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>SmartPlant</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>SMARTPLANT</h2>
+            <p>Det essentielle redskab for enhver plante ejer.</p>
+        </div>
+
+        <!-- Navbar -->
+        <div class="topnav">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#" style="float:right">Link</a>
+        </div>
+
+        <!-- Item Cards-->
+        <div>
+            <div class="card">
+                <h2>Title</h2>
+                <h5>subtitle</h5>
+                <div class="contentbox" style="height: 200px;">Image/Text</div>
+                <p>Text</p>
+
+
+            </div>
+        </div>
+
+
+        <!-- Column setup -->
+
+        <!-- Left Column -->
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>Posts</h2>
+                    <h5>All the posts in the DB</h5>
+                    <hr>
+                    <div class="contentbox" style="height:250px;">
+                        <div class="scroll">
+                            <ol v-if="posts.length > 0">
+                                <li v-for="post in posts">
+                                    {{ post.id }}: {{ post.title }}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <br>
+                    <button @click="getPosts">Load Posts</button>
+                    <button @click="clearList">Clear Posts</button>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Post By Id</h2>
+                    <input v-model.number="postId" placeholder="Post Id" type="number">
+                    <button @click="getPostById(postId)">Get by id</button>
+                    <hr>
+                    <div class="contentbox" style="height:80px;" v-if="error" style="color: red">{{ error }}</div>
+                    <div class="contentbox" style="height:250px;">
+                        <div v-if="post">
+                            {{post.id}} {{post.title}}
+                        </div>
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>SMARTPLANT© - Footer text</h2>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js" crossorigin="anonymous"></script>
+    <script src="../Javascript/index.js"></script>
+</body>
+
+</html>
