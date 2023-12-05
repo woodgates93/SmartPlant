@@ -10,5 +10,6 @@ namespace SmartPlantLib.Entities
     {
         public int Id { get; set; }
         public double Value { get; set; }
+        public DateTime CreatedTimestamp { get; set; }
     }
 }

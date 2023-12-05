@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartPlantApiData.Repos;
+using SmartPlantData.Repos;
 using SmartPlantLib.Collection;
 using SmartPlantLib.Dto;
 using SmartPlantLib.Entities;
@@ -40,21 +40,20 @@ namespace SmartPlantApi.Controllers
 
         // GET api/<TempController>/5
         [HttpGet]
-        [Route("{id}")]
+        [Route("{rows}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Get(int id)
+        public IActionResult Get(int rows)
         {
             try
             {
-                Temperature temperature = _data.GetById(id);
-                return Ok(temperature);
+                var temperatures = _temperatureRepo.GetLatest(rows);
+                return Ok(temperatures);
             }
             catch (KeyNotFoundException knfe)
             {
                 return NotFound();
             }
-            
         }
 
         // POST api/<TempController>

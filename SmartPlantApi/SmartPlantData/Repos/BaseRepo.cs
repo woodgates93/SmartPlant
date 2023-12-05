@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SmartPlantApiData;
 
-namespace SmartPlantApiData.Repos
+namespace SmartPlantData.Repos
 {
     public abstract class BaseRepo<T> where T : class
     {
@@ -22,6 +18,11 @@ namespace SmartPlantApiData.Repos
         public ICollection<T> Save(ICollection<T> entities)
         {
             return Context.SaveEntities(entities);
+        }
+
+        public ICollection<T> GetLatest(int rows = 100)
+        {
+            return Context.Get<T>(rows);
         }
     }
 }

@@ -20,6 +20,14 @@ namespace SmartPlantApiData
             optionsBuilder.UseSqlServer(Secret.ConnectionString);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TemperatureEntity>()
+                .Property(e => e.CreatedTimestamp)
+                .HasDefaultValueSql("GETUTCDATE()");
+        }
+
+
         public T SaveEntity<T>(T entity) where T : class
         {
             if (entity == null)
@@ -59,5 +67,22 @@ namespace SmartPlantApiData
                 throw;
             }
         }
+
+        public ICollection<T> Get<T>(int rows = 100) where T : class
+        {
+            using var context = new SmartPlantContext();
+
+            var entityType = context.Model.FindEntityType(typeof(T));
+            if (entityType == null || entityType.FindProperty("CreatedTimestamp") == null)
+            {
+                throw new InvalidOperationException("Type must have a CreatedTimestamp property.");
+            }
+
+            return context.Set<T>()
+                .OrderByDescending(e => EF.Property<DateTime>(e, "CreatedTimestamp"))
+                .Take(rows)
+                .ToList();
+        }
+
     }
 }

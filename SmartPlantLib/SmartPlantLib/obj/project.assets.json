@@ -8,24 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\penoi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\penoi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantLib\\SmartPlantLib\\SmartPlantLib.csproj",
+      "projectUniqueName": "C:\\Dev\\repos\\SmartPlant_gruppe\\SmartPlantLib\\SmartPlantLib\\SmartPlantLib.csproj",
       "projectName": "SmartPlantLib",
-      "projectPath": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantLib\\SmartPlantLib\\SmartPlantLib.csproj",
+      "projectPath": "C:\\Dev\\repos\\SmartPlant_gruppe\\SmartPlantLib\\SmartPlantLib\\SmartPlantLib.csproj",
       "packagesPath": "C:\\Users\\penoi\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\Sources\\Repos\\SmartPlant_Gruppe\\SmartPlantLib\\SmartPlantLib\\obj\\",
+      "outputPath": "C:\\Dev\\repos\\SmartPlant_gruppe\\SmartPlantLib\\SmartPlantLib\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\penoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

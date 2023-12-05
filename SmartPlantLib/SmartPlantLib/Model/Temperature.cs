@@ -8,28 +8,13 @@ namespace SmartPlantLib.Model
 {
     public class Temperature
     {
-        private int _id;
-        private double _temperature;
+        public double Temp { get; set; }
+        public DateTime CreatedTime { get; set; }
 
-
-        public int Id { get { return _id; } set { _id = value; } }
-        public double Temp { get { return _temperature; } set { _temperature = value; } }
-
-
-        public Temperature() {
-            _id= 0;
-            _temperature = 0;
-        }
-
-        public Temperature(int id, double temperature)
-        {
-            _id = id;
-            _temperature = temperature;
-        }
 
         public override string ToString()
         {
-            return $"{{{nameof(Id)}={Id.ToString()},{nameof(Temp)}={Temp.ToString()}}}";
+            return $"{{{nameof(CreatedTime)}={CreatedTime.ToString()},{nameof(Temp)}={Temp.ToString()}}}";
         }
 
 
