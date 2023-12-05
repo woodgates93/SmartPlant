@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="SmartPlantData">
       <HintPath>..\SmartPlantData\bin\Debug\net7.0\SmartPlantData.dll</HintPath>
     </Reference>

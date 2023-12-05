@@ -73,6 +73,13 @@ C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net
 C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.pdb
 C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.genruntimeconfig.cache
 C:\Dev\Sources\Repos\SmartPlant_Gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\ref\SmartPlantApi.dll
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.csproj.AssemblyReference.cache
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.AssemblyInfoInputs.cache
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.AssemblyInfo.cs
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.csproj.CoreCompileInputs.cache
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\appsettings.Development.json
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\appsettings.json
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\SmartPlantApi.exe
@@ -126,13 +133,6 @@ C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\Smar
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\SmartPlantLib.dll
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\SmartPlantData.pdb
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\bin\Debug\net7.0\SmartPlantLib.pdb
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.csproj.AssemblyReference.cache
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.AssemblyInfoInputs.cache
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.AssemblyInfo.cs
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.csproj.CoreCompileInputs.cache
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\SmartPlantApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\staticwebassets\msbuild.SmartPlantApi.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\staticwebassets\msbuild.build.SmartPlantApi.props
 C:\Dev\repos\SmartPlant_gruppe\SmartPlantApi\SmartPlantApi\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SmartPlantApi.props

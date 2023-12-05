@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartPlantData.Repos;
+using SmartPlantApi.Services;
 using SmartPlantLib.Collection;
 using SmartPlantLib.Dto;
 using SmartPlantLib.Entities;
@@ -14,12 +14,12 @@ namespace SmartPlantApi.Controllers
     public class TempController : ControllerBase
     {
         private TemperatureCellection _data;
-        private readonly TemperatureRepo _temperatureRepo;
+        private readonly TemperatureService _temperatureService;
 
-        public TempController(TemperatureCellection collection, TemperatureRepo temperatureRepo)
+        public TempController(TemperatureCellection collection, TemperatureService temperatureService)
         {
             _data = collection;
-            _temperatureRepo = temperatureRepo;
+            _temperatureService = temperatureService;
         }
 
 
@@ -27,28 +27,51 @@ namespace SmartPlantApi.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public IActionResult Get()
+        public IActionResult GetLatest()
         {
-            IEnumerable<Temperature> temperatures = _data.GetAll();
-
-            if (temperatures.ToList().Count== 0)
+            var temperatures = new List<Temperature>();
+            try
             {
+                temperatures = _temperatureService.GetLatest();
+                if (temperatures.Any())
+                {
+                    return Ok(temperatures);
+                }
                 return NoContent();
+
             }
-            return Ok(temperatures);
+            catch (KeyNotFoundException knfe)
+            {
+                return NotFound();
+            }
         }
 
         // GET api/<TempController>/5
         [HttpGet]
         [Route("{rows}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int rows)
         {
+            var temperatures = new List<Temperature>();
             try
             {
-                var temperatures = _temperatureRepo.GetLatest(rows);
-                return Ok(temperatures);
+                if (rows <= 0)
+                {
+                    return RedirectToAction(nameof(GetLatest));
+                }
+                else
+                {
+                    temperatures = _temperatureService.Get(rows);
+                }
+
+                if (temperatures.Any())
+                {
+                    return Ok(temperatures);
+                }
+                return NoContent();
+
             }
             catch (KeyNotFoundException knfe)
             {
@@ -64,26 +87,13 @@ namespace SmartPlantApi.Controllers
         {           
             try
             {
-                TemperatureEntity temperature = _temperatureRepo.Save(new TemperatureEntity() { Value = dto.Temp }  );
+                TemperatureEntity temperature = _temperatureService.Save(new TemperatureEntity() { Value = dto.Temp }  );
                 return Created($"api/Temp/{temperature.Id}", temperature);
             }
             catch (KeyNotFoundException)
             {
                 return UnprocessableEntity();
             }
-          
-        }
-
-        // PUT api/<TempController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<TempController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

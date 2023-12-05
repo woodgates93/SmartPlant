@@ -1,4 +1,4 @@
-﻿using SmartPlantApiData;
+﻿using SmartPlantLib.Entities;
 
 namespace SmartPlantData.Repos
 {

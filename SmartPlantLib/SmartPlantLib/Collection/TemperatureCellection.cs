@@ -25,13 +25,14 @@ namespace SmartPlantLib.Collection
 
         public Temperature GetById(int id)
         {
-            Temperature? temperature = _tempList.Find(t => t.Id == id);
+            throw new NotImplementedException();
+            //Temperature? temperature = _tempList.Find(t => t.Id == id);
 
-            if (temperature is null)
-            {
-                throw new KeyNotFoundException();
-            }
-            return temperature;
+            //if (temperature is null)
+            //{
+            //    throw new KeyNotFoundException();
+            //}
+            //return temperature;
         }
 
         public IEnumerable<Temperature> GetAll()

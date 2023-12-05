@@ -1,5 +1,6 @@
+using SmartPlantApi.Services;
 using SmartPlantLib.Collection;
-using SmartPlantApiData;
+using SmartPlantData;
 using SmartPlantData.Repos;
 
 using (var context = new SmartPlantContext())
@@ -19,6 +20,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<SmartPlantContext>();
 
 builder.Services.AddSingleton<TemperatureCellection>();
+
+builder.Services.AddSingleton<TemperatureService>();
 builder.Services.AddSingleton<TemperatureRepo>();
 
 builder.Services.AddCors(options =>

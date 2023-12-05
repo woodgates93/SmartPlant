@@ -1,15 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartPlantLib.Entities;
-using SmartPlantLib.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SmartPlantApiData
+namespace SmartPlantData
 {
     public class SmartPlantContext : DbContext
     {
