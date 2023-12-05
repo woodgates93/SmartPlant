@@ -50,11 +50,11 @@
                     <hr>
                     <div class="contentbox" style="height:250px;">
                         <div class="scroll">
-                            <ol v-if="posts.length > 0">
+                            <ul v-if="posts.length > 0">
                                 <li v-for="post in posts">
-                                    {{ post.id }}: {{ post.title }}
+                                    ({{ post.createdTime }})  Temperature: {{ post.temp }} 
                                 </li>
-                            </ol>
+                            </ul>
                         </div>
                     </div>
                     <br>
