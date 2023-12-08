@@ -9,35 +9,35 @@ namespace SmartPlantLib.Collection
 {
     public class TemperatureCellection
     {
-        private List<Temperature> _tempList;
+        private List<SensorData> _tempList;
      
         
         public TemperatureCellection() {
-            _tempList= new List<Temperature>();
+            _tempList= new List<SensorData>();
         }
 
-        public Temperature Add(Temperature temperature)
+        public SensorData Add(SensorData sensorData)
         {
-            _tempList.Add(temperature);
+            _tempList.Add(sensorData);
 
-            return temperature;
+            return sensorData;
         }
 
-        public Temperature GetById(int id)
+        public SensorData GetById(int id)
         {
             throw new NotImplementedException();
-            //Temperature? temperature = _tempList.Find(t => t.Id == id);
+            //SensorData? sensorData = _tempList.Find(t => t.Id == id);
 
-            //if (temperature is null)
+            //if (sensorData is null)
             //{
             //    throw new KeyNotFoundException();
             //}
-            //return temperature;
+            //return sensorData;
         }
 
-        public IEnumerable<Temperature> GetAll()
+        public IEnumerable<SensorData> GetAll()
         {
-            return new List<Temperature>(_tempList);
+            return new List<SensorData>(_tempList);
         }
 
 

@@ -7,24 +7,25 @@ namespace SmartPlantApi.Services
     public class TemperatureService
     {
         private readonly TemperatureRepo _temperatureRepo;
+
         public TemperatureService(TemperatureRepo temperatureRepo)
         {
             _temperatureRepo = temperatureRepo;
         }
 
-        public List<Temperature> GetLatest()
+        public List<SensorData> GetLatest()
         {
             List<TemperatureEntity> entities = new List<TemperatureEntity>(_temperatureRepo.GetLatest());
-            var temperatures = new List<Temperature>();
-            entities.ForEach(e => temperatures.Add(new Temperature() {Temp = e.Value, CreatedTime = e.CreatedTimestamp}));
+            var temperatures = new List<SensorData>();
+            entities.ForEach(e => temperatures.Add(new SensorData(e)));
             return temperatures;
         }
 
-        public List<Temperature> Get(int rows)
+        public List<SensorData> Get(int rows)
         {
             List<TemperatureEntity> entities = new List<TemperatureEntity>(_temperatureRepo.GetLatest(rows));
-            var temperatures = new List<Temperature>();
-            entities.ForEach(e => temperatures.Add(new Temperature() { Temp = e.Value, CreatedTime = e.CreatedTimestamp }));
+            var temperatures = new List<SensorData>();
+            entities.ForEach(e => temperatures.Add(new SensorData(e)));
             return temperatures;
         }
 
@@ -34,3 +35,4 @@ namespace SmartPlantApi.Services
         }
     }
 }
+

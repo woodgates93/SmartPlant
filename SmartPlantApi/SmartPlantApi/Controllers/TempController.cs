@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using SmartPlantApi.Services;
 using SmartPlantLib.Collection;
 using SmartPlantLib.Dto;
 using SmartPlantLib.Entities;
 using SmartPlantLib.Model;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -29,7 +31,7 @@ namespace SmartPlantApi.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult GetLatest()
         {
-            var temperatures = new List<Temperature>();
+            var temperatures = new List<SensorData>();
             try
             {
                 temperatures = _temperatureService.GetLatest();
@@ -54,7 +56,7 @@ namespace SmartPlantApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int rows)
         {
-            var temperatures = new List<Temperature>();
+            var temperatures = new List<SensorData>();
             try
             {
                 if (rows <= 0)
@@ -87,8 +89,15 @@ namespace SmartPlantApi.Controllers
         {           
             try
             {
-                TemperatureEntity temperature = _temperatureService.Save(new TemperatureEntity() { Value = dto.Temp }  );
-                return Created($"api/Temp/{temperature.Id}", temperature);
+                TemperatureEntity temperature = _temperatureService.Save(new TemperatureEntity()
+                {
+                    Temperature = dto.Temperature,
+                    Humidity = dto.Humidity,
+                    Moisture = dto.Moisture,
+                    WaterLevel = dto.WaterLevel,
+                    LightResistance = dto.LightResistance
+                }  );
+                return Created($"api/SensorData/{temperature.Id}", temperature);
             }
             catch (KeyNotFoundException)
             {

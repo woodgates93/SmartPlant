@@ -3,7 +3,7 @@ from socket import *
 import threading
 import json
 
-RECEIVING_PORT = 45600
+RECEIVING_PORT = 6666
 BUFFER_SIZE = 1024
 REST_URL = 'http://localhost:5053/api/Temp'
 

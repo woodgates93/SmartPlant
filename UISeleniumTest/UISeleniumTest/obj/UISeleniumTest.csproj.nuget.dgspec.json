@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sarah\\OneDrive\\Documents\\GitHub\\SmartPlant\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj": {}
+    "C:\\Dev\\repos\\SmartPlant_gruppe\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sarah\\OneDrive\\Documents\\GitHub\\SmartPlant\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj": {
+    "C:\\Dev\\repos\\SmartPlant_gruppe\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sarah\\OneDrive\\Documents\\GitHub\\SmartPlant\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj",
+        "projectUniqueName": "C:\\Dev\\repos\\SmartPlant_gruppe\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj",
         "projectName": "UISeleniumTest",
-        "projectPath": "C:\\Users\\sarah\\OneDrive\\Documents\\GitHub\\SmartPlant\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj",
-        "packagesPath": "C:\\Users\\sarah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sarah\\OneDrive\\Documents\\GitHub\\SmartPlant\\UISeleniumTest\\UISeleniumTest\\obj\\",
+        "projectPath": "C:\\Dev\\repos\\SmartPlant_gruppe\\UISeleniumTest\\UISeleniumTest\\UISeleniumTest.csproj",
+        "packagesPath": "C:\\Users\\penoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\repos\\SmartPlant_gruppe\\UISeleniumTest\\UISeleniumTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sarah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\penoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
