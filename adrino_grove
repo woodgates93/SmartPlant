@@ -1,0 +1,127 @@
+#include <DHT.h>
+#include <U8g2lib.h>
+#include <WiFiS3.h>
+#include <WiFiUdp.h>
+#include <ArduinoJson.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+#define MOISTURE_SENSOR_PIN A0
+
+DHT dht(DHTPIN, DHTTYPE);
+
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, SCL, SDA, U8X8_PIN_NONE);
+
+// WiFi settings
+const char* ssid = "Wifi_AP";
+const char* password = "*****";
+
+// UDP settings
+WiFiUDP Udp;
+unsigned int localPort = 2390;  // Local port to listen on
+
+void setup(void) {
+  u8g2.begin();
+  dht.begin();
+
+  // Display on OLED
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_ncenB08_tr);
+  u8g2.drawStr(0, 10, "Connecting to WiFi...");
+  u8g2.sendBuffer();
+
+  // Connect to WiFi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    u8g2.clearBuffer();
+    u8g2.setFont(u8g2_font_ncenB08_tr);
+    u8g2.drawStr(0, 10, "Connecting to WiFi...");
+    u8g2.drawStr(0, 25, ".");
+    u8g2.sendBuffer();
+  }
+
+  // Display on OLED
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_ncenB08_tr);
+  u8g2.drawStr(0, 10, "Connected to WiFi");
+  u8g2.sendBuffer();
+
+  // Initialize UDP
+  Udp.begin(localPort);
+
+  // Display on OLED
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_ncenB08_tr);
+  u8g2.drawStr(0, 10, "Initializing SI115...");
+  u8g2.sendBuffer();
+
+  // Display on OLED
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_ncenB08_tr);
+  u8g2.drawStr(0, 10, "SI115 Initialized");
+  u8g2.sendBuffer();
+}
+
+
+void loop(void) {
+  delay(2000);
+
+  float humidity = dht.readHumidity();
+  float temperature = dht.readTemperature();
+
+  // Read moisture sensor value
+  int moistureValue = analogRead(MOISTURE_SENSOR_PIN);
+
+  // Get current timestamp in milliseconds
+  unsigned long currentMillis = millis();
+
+  // Create a JSON object
+  DynamicJsonDocument jsonDocument(200);  // Adjust the size according to your needs
+
+  // Add data to the JSON object
+  jsonDocument["id"] = 1;
+  jsonDocument["temperature"] = temperature;
+  jsonDocument["humidity"] = humidity;
+  jsonDocument["moisture"] = moistureValue;
+
+  // Serialize the JSON object to a string
+  String sensorData;
+  serializeJson(jsonDocument, sensorData);
+
+  // Display sensor values on OLED
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_ncenB08_tr);
+
+  if (isnan(humidity) || isnan(temperature)) {
+    u8g2.drawStr(0, 10, "Failed to read DHT!");
+  } else {
+    char tempStr[20];
+    char humiStr[20];
+    char moistureStr[30];
+    char timestampStr[30];
+
+    sprintf(tempStr, "Temp: %.1f C", temperature);
+    sprintf(humiStr, "Humidity: %.1f%%", humidity);
+    sprintf(moistureStr, "Moisture: %d", moistureValue);
+
+    u8g2.drawStr(0, 10, tempStr);
+    u8g2.drawStr(0, 25, humiStr);
+    u8g2.drawStr(0, 55, moistureStr);
+  }
+
+  u8g2.sendBuffer();
+
+  // Broadcast sensor values over UDP
+  sendSensorData(sensorData);
+
+  delay(2000);
+}
+
+void sendSensorData(String sensorData) {
+  // Send sensor data over UDP
+  Udp.beginPacket(IPAddress(255, 255, 255, 255), 6666);
+  Udp.print(sensorData);
+  Udp.endPacket();
+}
+
