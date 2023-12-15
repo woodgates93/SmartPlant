@@ -14,50 +14,58 @@
 
         <!-- Header -->
         <div class="header">
-            <h2>SMARTPLANT</h2>
-            <p>Det essentielle redskab for enhver plante ejer.</p>
+            <h2>SMARTPLANT<img src="icons8-plant-48.png" alt="logo"></h2>
+            <p>The essential tool for every plant owner.</p>
         </div>
 
         <!-- Navbar -->
         <div class="topnav">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#" style="float:right">Link</a>
+            <a href="#">Home</a>
+            <a href="../test/index.html">Data overview</a>
         </div>
 
-        <!-- Item Cards-->
-        <div>
-            <div class="card">
-                <h2>Title</h2>
-                <h5>subtitle</h5>
-                <div class="contentbox" style="height: 200px;">Image/Text</div>
-                <p>Text</p>
-            </div>
-        </div>
 
+        
+        
 
         <!-- Column setup -->
-
         <!-- Left Column -->
         <div class="row">
             <div class="leftcolumn">
                 <div class="card">
                     <h2>Posts</h2>
-                    <h5>All the posts in the DB</h5>
-                    <hr>
-                    <div class="contentbox" style="height:250px;">
+                    <h5 style="color: gray">All the posts in the Database</h5>
+                    <hr style="color: #C3EDC0;">
+                    <div class="contentbox" style="height:480px;">
                         <div class="scroll">
-                            <ul v-if="posts.length > 0">
-                                <li v-for="post in posts">
-                                    ({{ post.createdTime }})  Temperature: {{ post.temperature }} Humidty: {{ post.humidity }} 
+                            <ol v-if="posts.length > 0">
+                                <li v-for="post in posts" style="color: gray; text-align: center;">
+                                    ({{ post.createdTime }})  Temperature: {{ post.temperature }} Humidty: {{ post.humidity }}
                                 </li>
-                            </ul>
+                            </ol>
                         </div>
                     </div>
                     <br>
-                    <button @click="getPosts">Load Posts</button>
-                    <button @click="clearList">Clear Posts</button>
+                    <button @click="getPosts" class="button">Load Posts</button>
+                    <button @click="clearList" class="button">Clear Posts</button>
+                </div>
+            </div>
+
+
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Weather Data</h2>
+                    <h5 style="color: gray">Local Temperature, Humidity and UV-Index</h5>
+                    <hr style="color: #c3edc0">
+                    <div class="contentbox" style="height: 200px;">                   
+                        <div v-if="weather" style="color: gray">
+                            <h3>
+                                Temperature: {{airTemperature}}°C.<br><br>
+                                Humidity: {{relativeHumidity}}%.<br><br>
+                                UV-Index: {{uvIndexClearSky}}. 
+                            </h3>
+                        </div>                    
+                    </div>
                 </div>
             </div>
 
@@ -65,16 +73,17 @@
             <div class="rightcolumn">
                 <div class="card">
                     <h2>Post By Id</h2>
-                    <input v-model.number="postId" placeholder="Post Id" type="number">
-                    <button @click="getPostById(postId)">Get by id</button>
-                    <hr>
+                    <h5 style="color: gray">Choose a post to look at</h5>
+                    <hr style="color: #c3edc0;">
                     <div class="contentbox" style="height:80px;" v-if="error" style="color: red">{{ error }}</div>
-                    <div class="contentbox" style="height:250px;">
-                        <div v-if="post">
-                            {{post.id}} {{post.title}}
+                    <div class="contentbox" style="height:100px;">
+                        <div v-if="post" style="color: gray">
+                            <h3>{{post.id}}: {{post.title}}</h3>
                         </div>
                     </div>
-                    <br><br><br>
+                    <br>
+                    <input v-model.number="postId" placeholder="Post Id" type="number">
+                    <button @click="getPostById(postId)" class="button">Get by id</button>
                 </div>
             </div>
         </div>
@@ -83,7 +92,9 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2>SMARTPLANT© - Footer text</h2>
+        <h3>SMARTPLANT©<img src="icons8-plant-48.png" alt="logo"></h3>
+        <h6><a target="_blank" href="https://icons8.com/icon/mboxki6Nw4Mw/plant">Plant</a> icon by <a target="_blank"
+                href="https://icons8.com">Icons8</a></h6>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js" crossorigin="anonymous"></script>
